@@ -7,23 +7,22 @@
 #include <QSettings>
 
 #include <QDebug>
+#include <QDir>
 
 void OpenDatabse()
 {
-    QSettings config("config.ini",QSettings::IniFormat);
-    config.beginGroup("sql");
-    config.setValue("server","localhost");
-    qDebug() << config.value("server").toString();
+    QDir dir(QDir::currentPath());
+    QSettings config(dir.currentPath()+"//app.ini",QSettings::IniFormat);
     QSqlDatabase db=QSqlDatabase::addDatabase("QODBC");
     db.setDatabaseName(QString("DRIVER={SQL SERVER};"
                                "SERVER=%1;" //服务器名称
                                "DATABASE=%2;"//数据库名
                                "UID=%3;"           //登录名
                                "PWD=%4;"        //密码
-                               ).arg(config.value("/sql/server").toString())
-                       .arg(config.value("/sql/databse").toString())
-                       .arg(config.value("/sql/uid").toString())
-                       .arg(config.value("/sql/pwd").toString())
+                               ).arg(config.value("/SQL/server").toString())
+                       .arg(config.value("/SQL/database").toString())
+                       .arg(config.value("/SQL/uid").toString())
+                       .arg(config.value("/SQL/pwd").toString())
                        );
 
      if(!db.open()){
