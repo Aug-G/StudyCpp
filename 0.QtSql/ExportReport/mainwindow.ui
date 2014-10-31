@@ -17,9 +17,9 @@
    <widget class="QComboBox" name="cbWareH">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>20</x>
       <y>60</y>
-      <width>91</width>
+      <width>191</width>
       <height>41</height>
      </rect>
     </property>
@@ -27,7 +27,7 @@
    <widget class="QPushButton" name="btnExport">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>230</x>
       <y>60</y>
       <width>101</width>
       <height>41</height>

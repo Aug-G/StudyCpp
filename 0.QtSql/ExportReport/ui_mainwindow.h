@@ -39,10 +39,10 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         cbWareH = new QComboBox(centralWidget);
         cbWareH->setObjectName(QStringLiteral("cbWareH"));
-        cbWareH->setGeometry(QRect(60, 60, 91, 41));
+        cbWareH->setGeometry(QRect(20, 60, 191, 41));
         btnExport = new QPushButton(centralWidget);
         btnExport->setObjectName(QStringLiteral("btnExport"));
-        btnExport->setGeometry(QRect(180, 60, 101, 41));
+        btnExport->setGeometry(QRect(230, 60, 101, 41));
         MainWindow->setCentralWidget(centralWidget);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QStringLiteral("statusBar"));
